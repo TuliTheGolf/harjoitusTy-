@@ -3,7 +3,7 @@ import random
 import sys
 pygame.init()
 
-width, height = 1000, 800
+width, height = 1500, 1000
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Uno")
 clock = pygame.time.Clock()
@@ -13,7 +13,7 @@ font = pygame.font.SysFont(None, 60)
 small_font = pygame.font.SysFont(None, 28)
 
 game_state = "menu"
-draw_count = 0
+draw_count = 4
 max_draws = 3
 start_time = 0
 game_time = 60
@@ -30,13 +30,13 @@ deck = None
 top_card = None
 
 colors = ["Red", "Green", "Blue", "Yellow"]
-values = [str(i) for i in range(0, 10)] + ["Skip", "Reverse", "+2"]
+values = [str(i) for i in range(0, 10)] + ["Skip", "Reverse", "+2", "Wild", "+4"]
 
 color_map = {
             "Red": (255, 0, 0),
             "Green": (0, 200, 0),
             "Blue": (0, 0, 255),
-            "Yellow": (255, 255, 0)
+            "Yellow": (255, 180, 40)
 }
 
 
